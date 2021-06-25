@@ -16,9 +16,7 @@ pipeline {
 
     // Build
     stage('Build') {
-      agent {
-        label 'ubuntu'
-      }
+      agent any
       steps {
         deleteDir()
         checkout scm
@@ -27,8 +25,7 @@ pipeline {
 
     // Static Code Analysis
     stage('Static Code Analysis') {
-      agent {
-        label 'ubuntu'
+      agent any
       }
       steps {
         deleteDir()
@@ -39,9 +36,7 @@ pipeline {
 
     // Unit Tests
     stage('Unit Tests') {
-      agent {
-        label 'ubuntu'
-      }
+      agent any
       steps {
         deleteDir()
         checkout scm
