@@ -17,7 +17,7 @@ pipeline {
     // Build
     stage('Build') {
       agent {
-        label 'node'
+        label 'ubuntu'
       }
       steps {
         deleteDir()
